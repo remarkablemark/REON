@@ -1,0 +1,18 @@
+{
+  "name": "reon-core",
+  "version": "0.0.1",
+  "description": "REON (React Element Object Notation) is a data-interchange format inspired by React elements and JSON.",
+  "author": "Mark <mark@remarkablemark.org>",
+  "keywords": [
+    "reon",
+    "react",
+    "element",
+    "object",
+    "notation",
+    "json",
+    "data"
+  ],
+  "dependencies": {},
+  "devDependencies": {},
+  "license": "MIT"
+}
