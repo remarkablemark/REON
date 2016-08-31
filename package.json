@@ -4,6 +4,9 @@
   "description": "REON (React Element Object Notation) is a data-interchange format inspired by React elements and JSON.",
   "author": "Mark <mark@remarkablemark.org>",
   "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
   "keywords": [
     "reon",
     "react",
@@ -15,6 +18,7 @@
   ],
   "dependencies": {},
   "devDependencies": {
+    "mocha": "^3.0.2",
     "react": "*"
   },
   "peerDependencies": {
