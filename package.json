@@ -8,6 +8,13 @@
     "test": "mocha",
     "lint": "eslint ."
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/remarkablemark/REON"
+  },
+  "bugs": {
+    "url": "https://github.com/remarkablemark/REON/issues"
+  },
   "keywords": [
     "reon",
     "react",
