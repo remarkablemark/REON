@@ -1,4 +1,6 @@
-# REON
+# REON [![NPM version](https://img.shields.io/npm/v/reon-core.svg)](https://www.npmjs.com/package/reon-core) [![Build Status](https://travis-ci.org/remarkablemark/REON.svg?branch=master)](https://travis-ci.org/remarkablemark/REON) [![Coverage Status](https://coveralls.io/repos/github/remarkablemark/REON/badge.svg)](https://coveralls.io/github/remarkablemark/REON)
+
+[![NPM](https://nodei.co/npm/reon-core.png)](https://nodei.co/npm/reon-core/)
 
 REON (React Element Object Notation) is a data-interchange format inspired by [React elements](https://facebook.github.io/react/docs/glossary.html#react-elements) and [JSON](http://www.json.org).
 
