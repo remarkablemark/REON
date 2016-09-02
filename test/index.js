@@ -51,7 +51,7 @@ describe('REON', function() {
             );
         });
 
-        it('transforms the results with `replacer`', function() {
+        it('transforms the results with `replacer` parameter', function() {
             assert.deepEqual(
                 REON.stringify(
                     React.createElement('head'),
@@ -148,8 +148,29 @@ describe('REON', function() {
 
             assert(React.isValidElement(parsed));
             assert.deepEqual(
-                REON.parse(REON.stringify(reactElement)),
+                REON.parse(
+                    REON.stringify(reactElement)
+                ),
                 reactElement
+            );
+        });
+
+        it('transforms the results with `reviver` parameter', function() {
+            var reactElement = React.createElement('a', {
+                href: 'http://foo.bar'
+            }, 'link');
+
+            assert.deepEqual(
+                REON.parse(
+                    REON.stringify(reactElement),
+                    function(key, value) {
+                        if (key === 'href') {
+                            return 'http://baz.qux';
+                        }
+                        return value;
+                    }
+                ),
+                React.cloneElement(reactElement, { href: 'http://baz.qux' })
             );
         });
 
