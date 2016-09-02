@@ -8,6 +8,14 @@ REON (React Element Object Notation) is a data-interchange format inspired by [R
 $ npm install reon-core
 ```
 
+## Usage
+
+To use **REON**, you must first import the module.
+
+```js
+var REON = require('reon-core');
+```
+
 ## Testing
 
 ```sh
