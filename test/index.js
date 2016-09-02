@@ -24,22 +24,45 @@ describe('REON', function() {
             });
         });
 
-        it('converts React element to string', function() {
+        it('converts simple React element to string', function() {
             assert.deepEqual(
-                REON.stringify(React.createElement('div', {
-                    className: 'foo'
-                }, 'text')),
+                REON.stringify(
+                    React.createElement('meta')
+                ),
+                JSON.stringify({
+                    type: 'meta',
+                    props: {}
+                })
+            );
+        });
+
+        it('converts complex React element to string', function() {
+            assert.deepEqual(
+                REON.stringify(
+                    React.createElement('div', { className: 'foo' }, 'text')
+                ),
                 JSON.stringify({
                     type: 'div',
-                    key: null,
-                    ref: null,
                     props: {
                         className: 'foo',
                         children: 'text'
-                    },
-                    _owner: null,
-                    _store: {}
+                    }
                 })
+            );
+        });
+
+        it('transforms the results with `replacer`', function() {
+            assert.deepEqual(
+                REON.stringify(
+                    React.createElement('head'),
+                    function(key, value) {
+                        if (value.type === 'head') {
+                            return { type: 'body' };
+                        }
+                        return value;
+                    }
+                ),
+                JSON.stringify({ type: 'body' })
             );
         });
 
