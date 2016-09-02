@@ -20,12 +20,14 @@ var REON = require('reon-core');
 
 The `REON.stringify()` method converts a [ReactElement](https://facebook.github.io/react/docs/glossary.html#react-elements) to a JSON string, optionally replacing values if a replacer function is specified.
 
-Syntax:
+**Syntax:**
+
 ```js
 REON.stringify(ReactElement[, replacer]);
 ```
 
-Parameters:
+**Parameters:**
+
 1. **ReactElement** (_required_): The [ReactElement](https://facebook.github.io/react/docs/glossary.html#react-elements) to convert to a JSON string.
 2. **replacer** (_optional_): A function that alters the behavior of the stringification process.
 
@@ -61,12 +63,14 @@ REON.stringify(
 
 The `REON.parse()` method parses a string as [ReactElement](https://facebook.github.io/react/docs/glossary.html#react-elements), optionally transforming the value producted by parsing.
 
-Syntax:
+**Syntax:**
+
 ```js
 REON.parse(text[, reviver]);
 ```
 
-Parameters:
+**Parameters:**
+
 1. **text** (_required_): The string to parse as [ReactElement](https://facebook.github.io/react/docs/glossary.html#react-elements).
 2. **reviver** (_optional_): A function that prescribes how the value originally produced by parsing is transformed, before being returned.
 
@@ -103,4 +107,4 @@ $ npm run lint
 
 ## License
 
-MIT
+[MIT](https://github.com/remarkablemark/REON/blob/master/LICENSE)
