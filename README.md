@@ -57,6 +57,43 @@ REON.stringify(
 // '{"type":"p","props":{"className":"sophisticated","children":"text"}}'
 ```
 
+### REON.parse()
+
+The `REON.parse()` method parses a string as [ReactElement](https://facebook.github.io/react/docs/glossary.html#react-elements), optionally transforming the value producted by parsing.
+
+Syntax:
+```js
+REON.parse(text[, reviver]);
+```
+
+Parameters:
+1. **text** (_required_): The string to parse as [ReactElement](https://facebook.github.io/react/docs/glossary.html#react-elements).
+2. **reviver** (_optional_): A function that prescribes how the value originally produced by parsing is transformed, before being returned.
+
+#### Examples:
+
+Using `JSON.parse()`:
+```js
+REON.parse(
+    '{"type":"p","props":{"className":"classy","children":"text"}}'
+);
+// React.createElement('p', { className: 'classy' }, 'text');
+```
+
+Using the `reviver` parameter:
+```js
+REON.parse(
+    '{"type":"a","props":{"href":"http://foo.bar",children":"link"}}',
+    function(key, value) {
+        if (key === 'href' && value === 'http://foo.bar') {
+            return 'http://baz.qux'; // return different href
+        }
+        return value; // return everything else unchanged
+    }
+);
+// React.createElement('a', { href: 'http://baz.qux' }, 'link');
+```
+
 ## Testing
 
 ```sh
