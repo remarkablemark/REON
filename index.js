@@ -4,5 +4,6 @@
  * Export REON methods.
  */
 module.exports = {
-    stringify: require('./lib/stringify')
+    stringify: require('./lib/stringify'),
+    parse: require('./lib/parse')
 };
