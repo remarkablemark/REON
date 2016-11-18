@@ -107,6 +107,10 @@ $ npm test
 $ npm run lint
 ```
 
+## Thanks
+
+To all the [contributors](https://github.com/remarkablemark/REON/graphs/contributors).
+
 ## License
 
 [MIT](https://github.com/remarkablemark/REON/blob/master/LICENSE)
