@@ -89,7 +89,7 @@ REON.parse(
 Using the `reviver` parameter:
 ```js
 REON.parse(
-    '{"type":"a","props":{"href":"http://foo.bar",children":"link"}}',
+    '{"type":"a","props":{"href":"http://foo.bar","children":"link"}}',
     function(key, value) {
         if (key === 'href' && value === 'http://foo.bar') {
             return 'http://baz.qux'; // return different href
