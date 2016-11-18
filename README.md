@@ -2,7 +2,7 @@
 
 [![NPM](https://nodei.co/npm/reon-core.png)](https://nodei.co/npm/reon-core/)
 
-REON (React Element Object Notation) is a data-interchange format inspired by [React elements](https://facebook.github.io/react/docs/glossary.html#react-elements) and [JSON](http://www.json.org).
+REON (React Element Object Notation) is a data-interchange format inspired by [React elements](https://facebook.github.io/react/docs/rendering-elements.html) and [JSON](http://www.json.org).
 
 ## Installation
 
@@ -20,7 +20,7 @@ var REON = require('reon-core');
 
 ### REON.stringify()
 
-The `REON.stringify()` method converts a [ReactElement](https://facebook.github.io/react/docs/glossary.html#react-elements) to a JSON string, optionally replacing values if a replacer function is specified.
+The `REON.stringify()` method converts a [ReactElement](https://facebook.github.io/react/docs/rendering-elements.html) to a JSON string, optionally replacing values if a replacer function is specified.
 
 **Syntax:**
 
@@ -30,7 +30,7 @@ REON.stringify(ReactElement[, replacer]);
 
 **Parameters:**
 
-1. **ReactElement** (_required_): The [ReactElement](https://facebook.github.io/react/docs/glossary.html#react-elements) to convert to a JSON string.
+1. **ReactElement** (_required_): The [ReactElement](https://facebook.github.io/react/docs/rendering-elements.html) to convert to a JSON string.
 2. **replacer** (_optional_): A function that alters the behavior of the stringification process.
 
 #### Examples:
@@ -63,7 +63,7 @@ REON.stringify(
 
 ### REON.parse()
 
-The `REON.parse()` method parses a string as [ReactElement](https://facebook.github.io/react/docs/glossary.html#react-elements), optionally transforming the value producted by parsing.
+The `REON.parse()` method parses a string as [ReactElement](https://facebook.github.io/react/docs/rendering-elements.html), optionally transforming the value producted by parsing.
 
 **Syntax:**
 
@@ -73,7 +73,7 @@ REON.parse(text[, reviver]);
 
 **Parameters:**
 
-1. **text** (_required_): The string to parse as [ReactElement](https://facebook.github.io/react/docs/glossary.html#react-elements).
+1. **text** (_required_): The string to parse as [ReactElement](https://facebook.github.io/react/docs/rendering-elements.html).
 2. **reviver** (_optional_): A function that prescribes how the value originally produced by parsing is transformed, before being returned.
 
 #### Examples:
