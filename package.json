@@ -1,6 +1,6 @@
 {
   "name": "reon-core",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "REON (React Element Object Notation) is a data-interchange format inspired by React elements and JSON.",
   "author": "Mark <mark@remarkablemark.org>",
   "main": "index.js",
