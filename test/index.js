@@ -11,12 +11,10 @@ var REON = require('../index');
  * REON methods.
  */
 describe('REON', function() {
-
     /**
      * Stringify.
      */
     describe('#stringify', function() {
-
         it('throws an error if argument is invalid', function() {
             var values = [undefined, null, {}, [],'foo', 42, { type: 'div' }];
             values.forEach(function(value) {
@@ -65,14 +63,12 @@ describe('REON', function() {
                 JSON.stringify({ type: 'body' })
             );
         });
-
     });
 
     /**
      * Parse.
      */
     describe('#parse', function() {
-
         it('throws an error if argument is invalid', function() {
             var values = [
                 undefined, null, {}, [], 42, { type: null },
@@ -173,7 +169,14 @@ describe('REON', function() {
                 React.cloneElement(reactElement, { href: 'http://baz.qux' })
             );
         });
-
     });
 
+    /**
+     * Parse object.
+     */
+    describe('#parseObject', function() {
+        it('returns the `objectToReactElement` function', function() {
+            assert.equal(REON.parseObject, require('../lib/object-to-react'));
+        });
+    });
 });
