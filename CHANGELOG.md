@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org).
 - Documentation
   - Add badges and improve links in README
   - Fix reviver example in README (#3)
+  - Tidy README and add section on `REON.parseObject()`
 
 ## [0.0.1](https://github.com/remarkablemark/REON/tree/v0.0.1) - 2016-09-02
 ### Added
