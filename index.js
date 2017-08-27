@@ -5,5 +5,6 @@
  */
 module.exports = {
     stringify: require('./lib/stringify'),
-    parse: require('./lib/parse')
+    parse: require('./lib/parse'),
+    parseObject: require('./lib/object-to-react')
 };
